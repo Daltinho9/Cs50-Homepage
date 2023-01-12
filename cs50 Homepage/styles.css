@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0 ,0 ,0.75), rgba(0, 0, 0, 0.75)), url(cs50-background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+h1 {
+    color: white;
+}
+
+
+.navbar {
+    width: 85%;
+    height: 10%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: darkcyan;
+    position: absolute;
+    left: 0;
+    bottom: -15%;
+    transition: .35s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.navbar::after {
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: darkcyan;
+    position: absolute;
+    left: 0;
+    bottom: -12%
+}
+
+.content {
+    width 100%;
+    position: relative;
+    top: 30%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 50px;
+    color: white;
+    position: relative;
+
+}
+
+.heading {
+    color: white;
+    display: flex;
+    font-size: 3rem;
+    justify-content: center;
+    padding-top: 9%;
+    padding-bottom: 0;
+}
+
+.content p {
+    color: white;
+    margin: 10px auto;
+    font-weight: 100;
+    line-height: 25px;
+    font-size: 20px
+}
+
+.container {
+    position: relative;
+    top: 10%;
+}
+
+.container-sm {
+    position: relative;
+    top: 5%;
+    max-width: 600px;
+    height: 37%;
+    background-color: rgba(211, 211, 211, 0.25);
+    border-radius: 10px;
+
+}
+
+form{
+    padding: 15px;
+}
+
+input{
+    background-color: darkcyan;
+}
+
+input::placeholder{
+    color: white;
+}
+
+input[type=text], input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid darkcyan;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 4px;
+    margin-bottom: 16px;
+    resize: vertical;
+
+}
+
+#submitbtn{
+    background-color: darkcyan;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px
+
+}
+
+#submitbtn:hover {
+    background-color: white;
+    color: darkcyan;
+
+}
+
+.accordion-button {
+    background-color: darkcyan;
+    color: white
+}
+
+.accordion-body {
+    background-color: lightgrey
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+  }
+
+  .accordion-header {
+    color: darkcyan
+  }
+
+  .accordion-button:not(.collapsed) {
+    background-color: darkcyan;
+    color: white
+  }
+
+
+
+
+
+.hamburger {
+    display: block;
+    position: relative;
+    z-index: 1;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin-bottom: 4px;
+    position: relative;
+
+    background-color: white;
+    border: none
+
+}
+
+.list {
+    display: none
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    min-height: 100vh;
+    display: block;
+    z-index: 98;
+    background-color: rgb(0, 129, 139);
+    padding-top: 120px;
+    text-align: center;
+    left: 100%;
+    transition: 0.4s;
+    }
+
+    .mobile-nav.is-active {
+        left: 50%;
+    }
+
+.mobile-nav .tag {
+    display: block;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    margin: 0 auto 16px;
+    width: 100%;
+    max-width: 200px;
+    padding: 12px;
+    background-color: rgb(0, 139, 150);
+    text-decoration: none;
+    border-radius: 10px;
+
+    }
+
+    .mobile-nav .tag:hover {
+        background-color: rgba(0, 139, 150, .5)
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    a:hover{
+        color: white;
+    }
+
+@media (min-width: 768px) {
+    .hamburger{
+        display: none;
+    }
+
+    .list {
+        display: block
+    }
+}
